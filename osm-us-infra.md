@@ -52,11 +52,12 @@ Street cabinets; how to differentiate between cable, fiber, phone.
 #### Cell
 Cell towers - possibly integration with OpenCellID somehow?
 **Small cell tagging needs created**, they are widespread in some areas.
-WiGLE is a useful tool for mapping out cell and WiFi networks.
+[WiGLE](https://wigle.net) is a useful tool for mapping out cell and WiFi networks.
 At some point a cell coverage map could be created using OSM data.
 
 #### Wi-Fi and others
-Free roadside WiFi access by providers like Spectrum, AT&T is attached to the lines and widespread.
+Free roadside WiFi access by providers like Spectrum, AT&T is attached to the lines and widespread. WiGLE is also useful here for determining coverage of different providers.  
+
 
 
 ### Traffic Lights
@@ -69,11 +70,11 @@ Possibly a traffic light relation connecting sensors, lights, timing and control
 
 
 ### Street Lights
-Currently, the most common way to tag street lights is simply a node with `highway=street_lamp`. Unless it is known, the type of light and other metadata are not usually added. This can be useful for data consumers and renderers, and is something that should be added.  
+Currently, the most common way to tag street lights is simply a node with `highway=street_lamp`. Unless it is known, the type of light and other metadata are not usually added. This can be useful for data consumers and renderers, and is something that should be more widely added.  
 [osmstreetlight.bplaced.net](http://osmstreetlight.bplaced.net) is a good example of a street light renderer.
 Need much more detailed way to ID different `lamp_type`s.
 Current tagging scheme is vague - `lamp_type=electric`??
-How to identify in the daytime and nighttime.
+How to identify in the daytime and nighttime - characteristics of the mount are easier to identify in daylight but the type of bulb is fast to ID at night.
 Types of mounts and shrouds.
 Daylight sensors, always-on or timed?
 
@@ -81,11 +82,11 @@ Daylight sensors, always-on or timed?
 
 
 # US Street Signs
-A searchable, online database should be created for looking up street signs and their tagging. It should contain pictures, short descriptions, sign text and colors, and similar signs to be searchable. It should be easily editable (GitHub repo likely) and contain all of the MUTCD signs with variants as well as state and local additions.
+A searchable, online database should be created for looking up street signs and their tagging. It should contain pictures, short descriptions, sign text and colors, and similar signs to be searchable. It should be easily editable (GitHub repo likely) and contain all of the MUTCD signs with variants as well as state and municipal additions.
   - Possibly expanded to be used for all street signs, not just U.S.
 
 A good in-depth guide should be created for the correct way to tag street signs.  
-There should be strong OpenStreetCam and Mapillary sign detection integration with projects like iD, and work should be put towards reducing false positives/negatives and model training.
+There should be strong OpenStreetCam and Mapillary sign detection integration with projects like iD, and work should be put towards reducing false positives/negatives through model training.
 
 # Miscellaneous Infrastructure
 These things don't fit into the other categories but still need their own tagging system.
