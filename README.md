@@ -32,6 +32,8 @@ Goes well with `power=terminal` for homes, but is found at every traffic light, 
 
 The [FHWA 1993 Highway/Utility Guide](https://www.fhwa.dot.gov/utilities/010604.pdf) ([Wayback](https://web.archive.org/web/*/https://www.fhwa.dot.gov/utilities/010604.pdf)) has some good insights into planning, pole space allocation, &c.
 
+A schema should be
+
 #### Shapes
 `design=*`
 
@@ -58,27 +60,38 @@ At some point a cell coverage map could be created using OSM data.
 #### Wi-Fi and others
 Free roadside WiFi access by providers like Spectrum, AT&T is attached to the lines and widespread. WiGLE is also useful here for determining coverage of different providers.  
 
+#### Wireless Surveillance
+Cameras, automated license plate readers (ALPR), speed sensors/traps, car counters.
+Some strings of sensors along highways are linked through direction RF antennas to each other and to a base station.
 
 
 ### Traffic Lights
 Street cabinets, refs on them, lights, cables, poles.
 
-A schema describing light timing might be useful at some point.
-Some way to indicate vehicle sensors (in-ground magenetic or vision).
+#### Light Patterns
+A schema describing light timing might be useful at some point. The logic of an intersection can usually be determined by watching it in action for a while.  
 
-Possibly a traffic light relation connecting sensors, lights, timing and control boxes.
+**Different Behaviours:**
+  - Timers (switching between roads)
+  - Timers (switching bahaviour at different times of day)
+  - Sensor-driven
+
+Need tagging for vehicle sensors (in-ground magenetic or vision).
+
+Possibly a traffic light relation describing timing and connecting sensors, lights, and control boxes.
 
 
 ### Street Lights
 Currently, the most common way to tag street lights is simply a node with `highway=street_lamp`. Unless it is known, the type of light and other metadata are not usually added. This can be useful for data consumers and renderers, and is something that should be more widely added.  
 [osmstreetlight.bplaced.net](http://osmstreetlight.bplaced.net) is a good example of a street light renderer.
 Need much more detailed way to ID different `lamp_type`s.
-Current tagging scheme is vague - `lamp_type=electric`??
+Current tagging scheme is vague; what is `lamp_type=electric` supposed to mean?
 How to identify in the daytime and nighttime - characteristics of the mount are easier to identify in daylight but the type of bulb is fast to ID at night.
 Types of mounts and shrouds.
 Daylight sensors, always-on or timed?
+Wattage, as indicated by NEMA codes.
 
-[A History of Street Lighting in the United States](en.wikipedia.org/wiki/History_of_street_lighting_in_the_United_States) on Wikipedia has a good overview of different types of lights and mounts, as well as many pictures of common light models.
+[A History of Street Lighting in the United States](en.wikipedia.org/wiki/History_of_street_lighting_in_the_United_States) on Wikipedia has a good overview of different types of lights and mounts, as well as many pictures of common light models. Especially useful is the [fixture type identification section](https://en.wikipedia.org/wiki/History_of_street_lighting_in_the_United_States#Fixture_type_identification).
 
 
 # US Street Signs
@@ -92,3 +105,15 @@ There should be strong OpenStreetCam and Mapillary sign detection integration wi
 These things don't fit into the other categories but still need their own tagging system.
 
   - [Variable Message Sign](https://en.wikipedia.org/wiki/Variable-message_sign)
+
+## Manholes
+There are different tiers of manhole load ratings. Stronger manholes are needed for roadsides vs yards.
+
+![Manhole Load Rating Diagram - Quazite](https://i.imgur.com/FjiN6cV.png)<br>
+(taken from [Quazite Catalog](http://comstarcity.com/files/datasheets/QUAZITE-CATALOG-2014-HPS%20QZ-1B.pdf))
+
+# Other Links
+
+  - [Seeing Networks](http://seeingnetworks.in)
+  - [Networks of Philly](https://networksofphilly.org)
+  - [North Star Highways](https://northstarhighways.wordpress.com)
