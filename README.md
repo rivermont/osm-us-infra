@@ -57,6 +57,8 @@ Cell towers - possibly integration with OpenCellID somehow?
 [WiGLE](https://wigle.net) is a useful tool for mapping out cell and WiFi networks.
 At some point a cell coverage map could be created using OSM data.
 
+[Hackaday - A Field Guide to the North American Communications Tower](https://hackaday.com/2016/04/05/a-field-guide-to-the-north-american-communications-tower)
+
 #### Wi-Fi and others
 Free roadside WiFi access by providers like Spectrum, AT&T is attached to the lines and widespread. WiGLE is also useful here for determining coverage of different providers.  
 
